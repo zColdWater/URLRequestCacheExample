@@ -1,0 +1,16 @@
+PODS:
+  - BestHttpInterceptor (1.1.0)
+
+DEPENDENCIES:
+  - BestHttpInterceptor (= 1.1.0)
+
+SPEC REPOS:
+  trunk:
+    - BestHttpInterceptor
+
+SPEC CHECKSUMS:
+  BestHttpInterceptor: b23f0f0f494fa712f4da02a3a61225ba7416c0f7
+
+PODFILE CHECKSUM: 1040b2d4ef6814d30654d5b957f174e9951fe765
+
+COCOAPODS: 1.8.4
