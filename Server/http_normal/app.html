@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>my-project</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but my-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div>测试</div>
+  </body>
+  <script>
+
+    function addXMLRequestCallback(callback){
+        var oldSend, i;
+        if( XMLHttpRequest.callbacks ) {
+            XMLHttpRequest.callbacks.push( callback );
+        } else {
+            XMLHttpRequest.callbacks = [callback];
+            oldSend = XMLHttpRequest.prototype.send;
+            XMLHttpRequest.prototype.send = function(){
+                for( i = 0; i < XMLHttpRequest.callbacks.length; i++ ) {
+                    XMLHttpRequest.callbacks[i]( this, arguments[0]);
+                }
+                // call the native send()
+                oldSend.apply(this, arguments);
+            }
+        }
+    }
+
+    addXMLRequestCallback( function( xhr, params ) {
+        // console.dir(xhr); 
+        console.log(params);
+    });
+
+    var params = {
+      "range":"Sheet1!A4:C4",
+      "majorDimension": "ROWS",
+      "values": [
+        ["Hello World","123", "456"]
+      ],
+    }
+
+    // XHR POST请求示例
+    var xhr = new XMLHttpRequest();
+    // var params = 'orem=ipsum&name=binny';
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            // alert(xhr.responseText);
+            console.log(xhr.responseText);
+        }
+    }
+    xhr.open('POST', 'http://127.0.0.1:3000/post', true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(params));
+
+
+
+  </script>
+</html>
