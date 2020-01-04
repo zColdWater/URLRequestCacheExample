@@ -8,9 +8,9 @@ Explain what's meaning URLRequestCachePolicy in iOS
 Example项目截图
 
 <div>
-<img style="float: left;" src="http://47.99.237.180:2088/files/870dfad554bc6fed966640cc5796f825" width="200" height="400" />
+<img style="float: left;" src="http://47.99.237.180:2088/files/870dfad554bc6fed966640cc5796f825" width="400" height="400" />
 
-<img style="float: left;" src="http://47.99.237.180:2088/files/fbe98d38bae77dfd6b8dd8a3d1f02a10" width="200" height="400" />
+<img style="float: left;" src="http://47.99.237.180:2088/files/fbe98d38bae77dfd6b8dd8a3d1f02a10" width="400" height="400" />
 </div>
 
 ## Usage
