@@ -52,7 +52,7 @@ app.use(express.static('http_max_age', {
   etag: false,
   lastModified: false,
   setHeaders: function(res, path) {
-	res.set("cache-control", "public, max-age=12000");
+	res.set("cache-control", "public, max-age=12");
   }
 }));
 
