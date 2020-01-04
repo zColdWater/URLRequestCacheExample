@@ -10,6 +10,8 @@ enum TableViewRowType: Int {
     case reloadIgnoringLocalCacheDataExample
     case returnCacheDataElseLoadExample
     case returnCacheDataDontLoadExample
+    case webview1Example
+    case webview2Example
 
     func getName() -> String {
         switch self {
@@ -27,6 +29,10 @@ enum TableViewRowType: Int {
             return "ReturnCacheDataElseLoad"
         case .returnCacheDataDontLoadExample:
             return "ReturnCacheDataDontLoad"
+        case .webview1Example:
+            return "自己写的简单H5"
+        case .webview2Example:
+            return "百度"
         }
     }
     
@@ -46,8 +52,14 @@ enum TableViewRowType: Int {
             return "只要本地有缓存 就一直用这份缓存 不会更新，如果没缓存去网络中获取"
         case .returnCacheDataDontLoadExample:
             return "如果本地有缓存就使用缓存 本地没有缓存就请求失败 类似离线模式"
+        case .webview1Example:
+            return "通过验证，我们发现，标签资源的加载使用的是我们设置的 reloadIgnoringLocalCacheData 缓存策略，但是由 HTML 里面的XHR发起的网络请求的缓存策略是 默认的缓存策略，也就是 useProtocolCachePolicy！"
+        case .webview2Example:
+            return "通过验证，我们发现，标签资源的加载使用的是我们设置的 reloadIgnoringLocalCacheData 缓存策略，但是由 HTML 里面的XHR发起的网络请求的缓存策略是 默认的缓存策略，也就是 useProtocolCachePolicy！"
         }
     }
+    
+    
     
     func perform(controller: UINavigationController) {
         switch self {
@@ -55,30 +67,45 @@ enum TableViewRowType: Int {
             let vc = DetailViewController.init(type: .useProtocolCachePolicyCacheControlExample)
             vc.title = "CacheControl"
             controller.pushViewController(vc, animated: true)
+            break
         case .useProtocolCachePolicyEtagExample:
             let vc = DetailViewController.init(type: .useProtocolCachePolicyEtagExample)
             vc.title = "ETag"
             controller.pushViewController(vc, animated: true)
+            break
         case .useProtocolCachePolicyLastModifiedExample:
             let vc = DetailViewController.init(type: .useProtocolCachePolicyLastModifiedExample)
             vc.title = "LastModified"
             controller.pushViewController(vc, animated: true)
+            break
         case .useProtocolCachePolicyExample:
             let vc = DetailViewController.init(type: .useProtocolCachePolicyExample)
             vc.title = "Normal"
             controller.pushViewController(vc, animated: true)
+            break
         case .reloadIgnoringLocalCacheDataExample:
             let vc = DetailViewController.init(type: .reloadIgnoringLocalCacheDataExample)
             vc.title = "ReloadIgnoringLocalCacheDataExample"
             controller.pushViewController(vc, animated: true)
+            break
         case .returnCacheDataElseLoadExample:
             let vc = DetailViewController.init(type: .returnCacheDataElseLoadExample)
             vc.title = "ReturnCacheDataElseLoadExample"
             controller.pushViewController(vc, animated: true)
+            break
         case .returnCacheDataDontLoadExample:
             let vc = DetailViewController.init(type: .returnCacheDataDontLoadExample)
             vc.title = "ReturnCacheDataDontLoadExample"
             controller.pushViewController(vc, animated: true)
+            break
+        case .webview1Example:
+            let vc = WebViewViewController(url: URL(string: "http://127.0.0.1:2001/app.html")!)
+            controller.pushViewController(vc, animated: true)
+            break
+        case .webview2Example:
+            let vc = WebViewViewController(url: URL(string: "https://www.baidu.com/")!)
+            controller.pushViewController(vc, animated: true)
+            break
         }
     }
 }

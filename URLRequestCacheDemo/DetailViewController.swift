@@ -58,6 +58,8 @@ class DetailViewController: UIViewController {
             configuration.requestCachePolicy = .returnCacheDataDontLoad
             url = URL(string: "http://127.0.0.1:2001/http_normal_beauty.png")!
             break
+        case .webview2Example,.webview1Example:
+            break
         }
         self.urlsession =  URLSession(configuration: configuration)
     }
