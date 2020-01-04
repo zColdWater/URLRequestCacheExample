@@ -7,6 +7,7 @@ enum TableViewSectionType: Int {
     case reloadIgnoringLocalCacheData
     case returnCacheDataElseLoad
     case returnCacheDataDontLoad
+    case webview
 
     func getName() -> String {
         switch self {
@@ -18,6 +19,8 @@ enum TableViewSectionType: Int {
             return "ReturnCacheDataElseLoad"
         case .returnCacheDataDontLoad:
             return "ReturnCacheDataDontLoad"
+        case .webview:
+            return "WebView"
         }
     }
 }

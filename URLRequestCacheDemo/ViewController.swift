@@ -9,7 +9,8 @@ class ViewController: UIViewController {
         [.useProtocolCachePolicy:[.useProtocolCachePolicyCacheControlExample,.useProtocolCachePolicyEtagExample,.useProtocolCachePolicyLastModifiedExample,.useProtocolCachePolicyExample],
          .reloadIgnoringLocalCacheData:[.reloadIgnoringLocalCacheDataExample],
          .returnCacheDataElseLoad:[.returnCacheDataElseLoadExample],
-         .returnCacheDataDontLoad:[.returnCacheDataDontLoadExample]]
+         .returnCacheDataDontLoad:[.returnCacheDataDontLoadExample],
+         .webview:[.webview1Example,.webview2Example]]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -6,6 +6,6 @@ target 'URLRequestCacheDemo' do
   use_frameworks!
 
   # Pods for URLRequestCacheDemo
-#  pod 'BestHttpInterceptor', '1.1.0'
+  pod 'BestHttpInterceptor', '1.1.0'
 
 end

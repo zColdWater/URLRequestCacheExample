@@ -59,6 +59,10 @@ app.use(express.static('http_max_age', {
 // CacheControl， LastModified ， Etag 都有。
 app.use(express.static('http_normal'));
 
+app.post('/post', function (req, res) {
+  res.send('Hello World!');
+});
+
 app.listen(2001, function () {
   console.log('Example app listening on port 2001!');
 });

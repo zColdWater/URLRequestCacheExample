@@ -8,34 +8,14 @@
     <title>my-project</title>
   </head>
   <body>
-    <noscript>
-      <strong>We're sorry but my-project doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
     <div>测试</div>
+    <div>
+      <img style="float: left;" src="http://47.99.237.180:2088/files/870dfad554bc6fed966640cc5796f825" width="400" height="400" />
+
+      <img style="float: left;" src="http://47.99.237.180:2088/files/fbe98d38bae77dfd6b8dd8a3d1f02a10" width="400" height="400" />
+    </div>
   </body>
   <script>
-
-    function addXMLRequestCallback(callback){
-        var oldSend, i;
-        if( XMLHttpRequest.callbacks ) {
-            XMLHttpRequest.callbacks.push( callback );
-        } else {
-            XMLHttpRequest.callbacks = [callback];
-            oldSend = XMLHttpRequest.prototype.send;
-            XMLHttpRequest.prototype.send = function(){
-                for( i = 0; i < XMLHttpRequest.callbacks.length; i++ ) {
-                    XMLHttpRequest.callbacks[i]( this, arguments[0]);
-                }
-                // call the native send()
-                oldSend.apply(this, arguments);
-            }
-        }
-    }
-
-    addXMLRequestCallback( function( xhr, params ) {
-        // console.dir(xhr); 
-        console.log(params);
-    });
 
     var params = {
       "range":"Sheet1!A4:C4",
@@ -57,8 +37,6 @@
     xhr.open('POST', 'http://127.0.0.1:3000/post', true);
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(params));
-
-
 
   </script>
 </html>

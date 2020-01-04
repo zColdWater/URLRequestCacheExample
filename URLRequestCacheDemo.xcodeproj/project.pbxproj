@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4FDFE63323C08AF0004A8B93 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFE63123C08AF0004A8B93 /* WebViewViewController.swift */; };
+		4FDFE63423C08AF0004A8B93 /* WebViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFE63223C08AF0004A8B93 /* WebViewViewController.xib */; };
 		4FFF153C23BEF42100521C6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF153B23BEF42100521C6E /* AppDelegate.swift */; };
 		4FFF153E23BEF42100521C6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF153D23BEF42100521C6E /* SceneDelegate.swift */; };
 		4FFF154023BEF42100521C6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFF153F23BEF42100521C6E /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4FDFE63123C08AF0004A8B93 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		4FDFE63223C08AF0004A8B93 /* WebViewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewViewController.xib; sourceTree = "<group>"; };
 		4FFF153823BEF42100521C6E /* URLRequestCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLRequestCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FFF153B23BEF42100521C6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FFF153D23BEF42100521C6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				4FFF154423BEF42300521C6E /* Assets.xcassets */,
 				4FFF154623BEF42300521C6E /* LaunchScreen.storyboard */,
 				4FFF154923BEF42300521C6E /* Info.plist */,
+				4FDFE63123C08AF0004A8B93 /* WebViewViewController.swift */,
+				4FDFE63223C08AF0004A8B93 /* WebViewViewController.xib */,
 			);
 			path = URLRequestCacheDemo;
 			sourceTree = "<group>";
@@ -114,6 +120,7 @@
 				4FFF153423BEF42100521C6E /* Sources */,
 				4FFF153523BEF42100521C6E /* Frameworks */,
 				4FFF153623BEF42100521C6E /* Resources */,
+				C367CEB14D24A2DD4ACB8D1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDFE63423C08AF0004A8B93 /* WebViewViewController.xib in Resources */,
 				4FFF154823BEF42300521C6E /* LaunchScreen.storyboard in Resources */,
 				4FFF154523BEF42300521C6E /* Assets.xcassets in Resources */,
 				4FFF154323BEF42100521C6E /* Main.storyboard in Resources */,
@@ -194,6 +202,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C367CEB14D24A2DD4ACB8D1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-URLRequestCacheDemo/Pods-URLRequestCacheDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-URLRequestCacheDemo/Pods-URLRequestCacheDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-URLRequestCacheDemo/Pods-URLRequestCacheDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -201,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDFE63323C08AF0004A8B93 /* WebViewViewController.swift in Sources */,
 				4FFF155223BEFC6700521C6E /* TableViewRow.swift in Sources */,
 				4FFF154023BEF42100521C6E /* ViewController.swift in Sources */,
 				4FFF155023BEFB5A00521C6E /* TableViewSection.swift in Sources */,
