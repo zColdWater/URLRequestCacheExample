@@ -20,11 +20,12 @@ class ViewController: UIViewController {
     
     @IBAction func cleanCache(_ sender: Any) {
         setupCleanURLRequestCache()
+        let cache = URLCache(memoryCapacity: 4 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024)
+        URLCache.shared = cache
     }
     
     // 清空缓存
     func setupCleanURLRequestCache() {
-
         let libraryDirectory = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
         let cachesDirectory = libraryDirectory + "/Caches" + "/\(Bundle.main.bundleIdentifier!)"
         let isExist = FileManager.default.fileExists(atPath: cachesDirectory)
@@ -74,9 +75,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let type = TableViewSectionType(rawValue: indexPath.section) else { assertionFailure(); return UITableViewCell() }
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: TableViewCellId)
         cell.textLabel?.text = dataSource[type]?[indexPath.row].getName()
+        cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.text = dataSource[type]?[indexPath.row].getDescription()
         cell.detailTextLabel?.numberOfLines = 0
         cell.selectionStyle = .none
+        cell.detailTextLabel?.textColor = .red
         return cell
     }
     

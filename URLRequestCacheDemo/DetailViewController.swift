@@ -28,6 +28,7 @@ class DetailViewController: UIViewController {
     
     func setupSession() {
         let configuration: URLSessionConfiguration = URLSessionConfiguration.default
+
         switch self.type {
         case .useProtocolCachePolicyCacheControlExample:
             configuration.requestCachePolicy = .useProtocolCachePolicy
@@ -47,15 +48,15 @@ class DetailViewController: UIViewController {
             break
         case .reloadIgnoringLocalCacheDataExample:
             configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-            url = URL(string: "")!
+            url = URL(string: "http://127.0.0.1:2001/http_normal_beauty.png")!
             break
         case .returnCacheDataElseLoadExample:
             configuration.requestCachePolicy = .returnCacheDataElseLoad
-            url = URL(string: "")!
+            url = URL(string: "http://127.0.0.1:2001/http_normal_beauty.png")!
             break
         case .returnCacheDataDontLoadExample:
             configuration.requestCachePolicy = .returnCacheDataDontLoad
-            url = URL(string: "")!
+            url = URL(string: "http://127.0.0.1:2001/http_normal_beauty.png")!
             break
         }
         self.urlsession =  URLSession(configuration: configuration)
