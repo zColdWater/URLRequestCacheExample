@@ -1,6 +1,8 @@
 # URLRequestCacheExample
 Explain what's meaning URLRequestCachePolicy in iOS
 
+讲解文章地址: http://47.99.237.180:8080/articles/2020/01/01/1577848007883.html (不好意思，域名还差几天才能转到阿里云。 腾讯云实在有点。。 。算了)
+
 这个项目是为了结合文章理解，iOS当中的URLRequestCache和Policy的使用，项目中分为iOS和Server两个端，先将Server端开启，然后运行iOS端，分别进入不同的缓存策略，观看终端的输出，来理解缓存是如何工作的。
 
 ## Example Screenshot
